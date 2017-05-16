@@ -17,7 +17,7 @@ Sensor.create(name:"Smoke", price:29.99, weight:0.5)
 Sensor.create(name:"Aux Siren", price: 59.99, weight:0.9)
 Sensor.create(name:"Freeze", price:29.99, weight:0.13)
 Sensor.create(name:"Water", price:19.99, weight:0.13)
-Sensor.create(name:"Cam", price: 99.99, weight:0.76)
+Sensor.create(name:"Cam", price: 99.00, weight:0.76)
 Sensor.create(name:"Yard Sign", price: 3.99, weight: 0.14)
 Sensor.create(name:"Panic", price:19.99, weight:0.09)
 
