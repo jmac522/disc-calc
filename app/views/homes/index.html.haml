@@ -1,3 +1,20 @@
-%p
-  Modify me in `app/views/homes/index.html.erb` or change the root directive in
-  `config/routes.rb`
+%div{class: "row logo-pic text-center"}
+  = image_tag "logo.png", class: "logo-image"
+%div{class: "row input-field-contaiter content-container"}
+  %div{class:"small-6 columns total-price"}
+    %label
+      Discounted Price
+      %input{type: "text", placeholder: "Discounted Price", id:"price-field"}
+  %div{class:"small-6 columns total-weight"}
+    %label
+      Total Weight
+      %input{type: "text", placeholder: "Total Weight", id:"weight-field"}
+.row.discount-selection-containter
+  %label.small-4.columns.small-centered
+    Discount Amount:
+    = select("discount","selector",@discounts.collect {|d| [d.name, d.value]}, {include_blank: "none"})
+%div{class: "row sensor-selection-container"}
+  - @sensors.each do |sensor|
+    .sensor-container.small-3.columns.end
+      %h6= sensor.name
+      %input{class: "sensor-quant", type: "number", min: "0", value: 0, data: {price: sensor.price, weight: sensor.weight}}
