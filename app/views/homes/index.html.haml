@@ -15,6 +15,11 @@
     = select("discount","selector",@discounts.collect {|d| [d.name, d.value]}, {include_blank: "none"})
 %div{class: "row sensor-selection-container"}
   - @sensors.each do |sensor|
-    .sensor-container.small-3.columns.end
-      %h6= sensor.name
-      %input{class: "sensor-quant", type: "number", min: "0", value: 0, data: {price: sensor.price, weight: sensor.weight}}
+    .sensor-container.small-3.columns.end.no-pad
+      .small-2.columns.no-pad.text-center.icon-container{data: {selector: sensor.name + "-input"}}
+        = image_tag "minus-icon.png", class: "minus-icon", id: sensor.name + "minus"
+      .small-8.columns
+        %h6= sensor.name
+        %input{class: "sensor-quant", id: sensor.name + "-input", type: "number", min: "0", value: 0, data: {price: sensor.price, weight: sensor.weight}}
+      .small-2.columns.no-pad.text-center.icon-container{data: {selector: sensor.name + "-input"}}
+        = image_tag "plus-icon.png", class: "plus-icon", id: sensor.name + "plus"

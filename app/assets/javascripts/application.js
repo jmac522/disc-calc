@@ -21,6 +21,20 @@ $( document ).ready(function() {
   $("input").click(function() {
     updateDisplay()
   });
+  $(".plus-icon").click(function() {
+    var selector = "#" + $(this).parent().data("selector");
+    var newValue = parseInt($(selector).val()) + 1;
+    $(selector).val(newValue);
+    updateDisplay()
+  });
+  $(".minus-icon").click(function() {
+    var selector = "#" + $(this).parent().data("selector");
+    var newValue = parseInt($(selector).val() - 1);
+    if (newValue > -1) {
+      $(selector).val(newValue);
+    }
+    updateDisplay()
+  });
   $("input").keypress(function(e) {
     updateDisplay(e)
   });

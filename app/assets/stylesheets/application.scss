@@ -20,6 +20,21 @@
   padding: 25px;
 }
 
+.no-pad {
+  padding: 0px;
+}
+
+.icon-container {
+  margin-top: 35px;
+}
+
+.plus-icon, .minus-icon {
+  height: 25px;
+}
+
+.plus-icon:hover, .minus-icon:hover {
+  cursor: pointer;
+}
 
 .logo-image {
   height: 100px;
