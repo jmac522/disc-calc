@@ -8,7 +8,7 @@ FactoryGirl.define do
   end
 
   factory :sensor do
-    sequence(:sensor) {|n| "sensor#{n}" }
+    sequence(:name) {|n| "sensor#{n}" }
     weight 0.9
     price 14.99
   end
